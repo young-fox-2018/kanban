@@ -9,22 +9,13 @@
             <div>
               <b-form>
                 <b-form-group label="Title" label-for="title" style="text-align:left;">
-                  <b-form-input
-                    id="title"
-                    type="text"
-                    v-model="title"
-                    required
-                    placeholder="Enter title"
-                  ></b-form-input>
+                  <b-form-input id="title" type="text" v-model="title" required placeholder="Enter title"></b-form-input>
                 </b-form-group>
                 <b-form-group label="Description" label-for="description" style="text-align:left;">
-                  <b-form-input
-                    id="description"
-                    type="text"
-                    v-model="description"
-                    required
-                    placeholder="Enter description"
-                  ></b-form-input>
+                  <b-form-input type="text" v-model="description" placeholder="Enter description"></b-form-input>
+                </b-form-group>
+                <b-form-group label="Assigned" label-for="assigned" style="text-align:left;">
+                  <b-form-input id="assigned" type="text" v-model="assignedTo" placeholder="Assigned to ..."></b-form-input>
                 </b-form-group>
                 <b-button variant="primary" @click.prevent="add">Add New Task</b-button>
               </b-form>
@@ -74,7 +65,8 @@ export default {
       doing: [],
       done: [],
       title: "",
-      description: ""
+      description: "",
+      assignedTo: ""
     };
   },
   created() {
@@ -102,11 +94,14 @@ export default {
       let newTask = {
         title: this.title,
         description: this.description,
-        status: "backlog"
+        status: "Backlog",
+        assignedTo: this.assignedTo
       };
 
       database.ref("kanban").push(newTask);
-      (this.title = ""), (this.description = "")
+      this.title = ""
+      this.description = ""
+      this.assignedTo = ""
     },
 
     initDataKanban() {
@@ -118,34 +113,21 @@ export default {
 
     getDataFirebase(data) {
       Object.keys(data).forEach(key => {
-        if (data[key].status == "backlog") {
-          this.backlog.push({
-            id: key,
-            title: data[key].title,
-            description: data[key].description,
-            status: data[key].status
-          });
-        } else if (data[key].status == "todo") {
-          this.todo.push({
-            id: key,
-            title: data[key].title,
-            description: data[key].description,
-            status: data[key].status
-          });
-        } else if (data[key].status == "doing") {
-          this.doing.push({
-            id: key,
-            title: data[key].title,
-            description: data[key].description,
-            status: data[key].status
-          });
+        let obj = {
+          id: key,
+          title: data[key].title,
+          description: data[key].description,
+          status: data[key].status,
+          assignedTo: data[key].assignedTo
+        }
+        if (data[key].status == "Backlog") {
+          this.backlog.push(obj);
+        } else if (data[key].status == "Todo") {
+          this.todo.push(obj);
+        } else if (data[key].status == "Doing") {
+          this.doing.push(obj);
         } else {
-          this.done.push({
-            id: key,
-            title: data[key].title,
-            description: data[key].description,
-            status: data[key].status
-          });
+          this.done.push(obj);
         }
       });
     }

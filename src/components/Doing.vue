@@ -7,6 +7,7 @@
           <b-modal :id="data.id" :title="data.title" hide-footer>
             <p class="card-text">Task description: {{data.description}}</p>
             <p class="card-text">Status: {{data.status}}</p>
+            <p class="card-text">Assigned to: {{data.assignedTo}}</p>
             <hr>
             <b-button class="btn" variant="warning" @click="todo(data)">Todo</b-button>
             <b-button class="btn" variant="danger" @click="deleteTask(data.id)">Delete</b-button>
@@ -36,7 +37,8 @@ export default {
       database.ref(`kanban/${task.id}`).set({
         title: task.title,
         description: task.description,
-        status: "todo"
+        status: "Todo",
+        assignedTo: task.assignedTo
       })
     },
     done(task){
@@ -44,7 +46,8 @@ export default {
       database.ref(`kanban/${task.id}`).set({
         title: task.title,
         description: task.description,
-        status: "done"
+        status: "Done",
+        assignedTo: task.assignedTo
       })
     }
   }
