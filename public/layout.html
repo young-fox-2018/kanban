@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kamvan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container is-fluid">
+
+      <!-- TOP ROW -->
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <h1 class="is-size-4 has-text-weight-semibold">KamVan Board</h1>
+          </div>
+        </div>
+        <div class="level-right">
+          <div class="level-item">
+            <button class="button is-link is-outlined">New Task</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Task Input -->
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title is-size-5">New Task</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <div class="field">
+              <label class="label">Title</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Task title">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Description</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Task description"></textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Point</label>
+              <div class="control">
+                <input class="input" type="number" value="0">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Assigned to</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Assigned to">
+              </div>
+            </div>
+
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success">Save</button>
+            <button class="button">Cancel</button>
+          </footer>
+        </div>
+      </div>
+
+      <!-- COLUMNS -->
+      <div class="columns is-variable is-1">
+
+        <div class="column">
+          <div class="message is-danger">
+            <div class="message-header">Back-log</div>
+            <div class="message-body">
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    Task
+                  </p>
+                  </a>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+                    <table class="table is-fullwidth">
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="has-text-weight-semibold">Point :</th>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="has-text-weight-semibold">Assigned to :</th>
+                          <td>Siapa</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item">Show Detail</a>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="message is-warning">
+            <div class="message-header">Back-log</div>
+            <div class="message-body">
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    Task
+                  </p>
+                  </a>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+                    <table class="table is-fullwidth">
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="has-text-weight-semibold">Point :</th>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="has-text-weight-semibold">Assigned to :</th>
+                          <td>Siapa</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item">Show Detail</a>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="message is-info">
+            <div class="message-header">Back-log</div>
+            <div class="message-body">
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    Task
+                  </p>
+                  </a>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+                    <table class="table is-fullwidth">
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="has-text-weight-semibold">Point :</th>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="has-text-weight-semibold">Assigned to :</th>
+                          <td>Siapa</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item">Show Detail</a>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="message is-success">
+            <div class="message-header">Back-log</div>
+            <div class="message-body">
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    Task
+                  </p>
+                  </a>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+                    <table class="table is-fullwidth">
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="has-text-weight-semibold">Point :</th>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="has-text-weight-semibold">Assigned to :</th>
+                          <td>Siapa</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item">Show Detail</a>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task detail -->
+      <div class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="card" style="min-width: 35vw; border-radius: 5px;">
+          <header class="card-header">
+            <p class="card-header-title">
+              Detail for task
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p class="has-text-weight-semibold">Task Description: </p>
+              <p>Description</p>
+              <p class="has-text-weight-semibold">Point: </p>
+              <p>0</p>
+              <p class="has-text-weight-semibold">Status: </p>
+              <p>Doing</p>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <div class="is-flex" style="justify-content: space-between; width: 100%; margin: 0.7rem">
+              <div class="button is-danger">Back-Log</div>
+              <div class="button is-warning">Back-Log</div>
+              <div class="button">Back-Log</div>
+            </div>
+          </footer>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+
+      </div>
+      
+    </div>
+  </section>
+</body>
+
+</html>
