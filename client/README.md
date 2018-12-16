@@ -1,5 +1,10 @@
 # client
 
+### Added Feature
+```
+- Time API
+```
+
 ## Project setup
 ```
 npm install

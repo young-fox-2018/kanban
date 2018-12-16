@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <h1 strong> Arnold's Kanban Board </h1> <hr>
+    <iframe style="display: inline;" align="right" src="http://free.timeanddate.com/clock/i6jr3fnv/n108/tlid/fn7/fs20/fc00f/ahr/tt0/tw0/tm1/td2/th1/ta1/tb4" frameborder="0" width="140" height="50"></iframe>
+
+    <h1 style="display: inline; margin: 0 auto;" strong> Arnold's Kanban Board </h1> <hr>
     <new-task />
+
     <router-view />
   </div>
 </template>
