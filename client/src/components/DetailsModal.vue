@@ -1,6 +1,6 @@
 <template>
   <div>
-  <b-modal :id="myModal" ref="detailsRef" :title="title" hide-footer>
+  <b-modal :id="myModal" ref="detailsRef" :title="title" fade hide-footer>
     <p>Task description: {{singleTask.description}}</p>
     <p>Point: {{singleTask.point}}</p>
     <p>Status: {{singleTask.status}}</p>

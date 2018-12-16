@@ -11,19 +11,16 @@
       <b-form-group label="Description">
         <b-form-textarea type="text"
                       v-model="description"
-                      required
                       placeholder="description">
         </b-form-textarea>
       </b-form-group>
       <b-form-group label="Point">
         <b-form-input type="number"
-                      required
                       v-model="point">
         </b-form-input>
       </b-form-group>
       <b-form-group label="Assigned to" >
         <b-form-input type="text"
-                      required
                       v-model="assigned"
                       placeholder="assigned to">
         </b-form-input>

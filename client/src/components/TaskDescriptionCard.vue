@@ -6,7 +6,7 @@
               class="font-weight-bold mb-2" hide-footer>
         <p class="card-text">Point: {{task.point}}</p>
         <p class="card-text">Assigned to: {{task.assigned}}</p>
-        <b-button v-b-modal="board + index" class="float-left" variant="primary" size="sm">details</b-button>
+        <b-button v-b-modal="board + index" class="float-left" variant="primary" size="sm">show details</b-button>
       </b-card>
       <DetailsModal :board="board" :single-task="task" :my-modal="board + index" 
                     @error-moving-task="errorMovingTask" @success-move-todo="successMoveTodo" />
