@@ -134,3 +134,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.card-text{
+  text-align: left;
+}
+</style>
