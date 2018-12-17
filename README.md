@@ -1,5 +1,5 @@
 # kanban
 
 deploy link: 
-    https://hacktiv8-kanban.firebaseapp.com/
-    https://kanban.hedyafeb.me/
+##### Firebase: https://hacktiv8-kanban.firebaseapp.com/
+##### GCS: https://kanban.hedyafeb.me/
