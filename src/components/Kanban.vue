@@ -10,65 +10,20 @@
     </div>
     <div class="row">
       <div class="col-3 my-2">
-        <!-- {{kanban}} -->
-        <b-card border-variant="danger"
-            header="Back-Log"
-            header-bg-variant="danger"
-            header-text-variant="white"
-            align="center" class="my-2 ">
-
-          <!-- isi kanban -->
-          <div v-for="(item, i) in kanban" :key="i">
-            <CardKanban  :kanban="item" v-if="item.status ==  'backlog'"
-            @modaldetail="modalDetail"/>
-          </div>
-          <!-- /isi kanban -->
-        </b-card>
+        <CardCategory :kanban="kanban" :variant="'danger'"
+        :typetask="'backlog'" :title="'Back Log'"/>
       </div>
       <div class="col-3 my-2">
-        <b-card border-variant="warning"
-            header="To-Do"
-            header-bg-variant="warning"
-            header-text-variant="white"
-            align="center" class="my-2 ">
-
-          <!-- isi kanban -->
-          <div v-for="(item, i) in kanban" :key="i">
-            <CardKanban  :kanban="item" v-if="item.status ==  'todo'"
-            @modaldetail="modalDetail"/>
-          </div>
-          <!-- /isi kanban -->
-        </b-card>
+        <CardCategory :kanban="kanban" :variant="'warning'"
+        :typetask="'todo'" :title="'To Do'"/>
       </div>
       <div class="col-3 my-2">
-        <b-card border-variant="primary"
-            header="Doing"
-            header-bg-variant="primary"
-            header-text-variant="white"
-            align="center" class="my-2 ">
-
-          <!-- isi kanban -->
-          <div v-for="(item, i) in kanban" :key="i">
-            <CardKanban  :kanban="item" v-if="item.status ==  'doing'"
-            @modaldetail="modalDetail"/>
-          </div>
-          <!-- /isi kanban -->
-        </b-card>
+        <CardCategory :kanban="kanban" :variant="'primary'"
+        :typetask="'doing'" :title="'Doing'"/>
       </div>
       <div class="col-3 my-2">
-        <b-card border-variant="success"
-            header="Done"
-            header-bg-variant="success"
-            header-text-variant="white"
-            align="center" class="my-2 ">
-
-          <!-- isi kanban -->
-          <div v-for="(item, i) in kanban" :key="i">
-            <CardKanban  :kanban="item" v-if="item.status ==  'done'"
-            @modaldetail="modalDetail"/>
-          </div>
-          <!-- /isi kanban -->
-        </b-card>
+        <CardCategory :kanban="kanban" :variant="'success'"
+        :typetask="'done'" :title="'Done'"/>
       </div>
     </div>
   </div>
@@ -78,13 +33,13 @@
 import { mapState } from 'vuex';
 import ModalAdd from '@/components/ModalAdd.vue';
 import ModalDetail from '@/components/ModalDetail.vue';
-import CardKanban from '@/components/CardKanban.vue';
+import CardCategory from '@/components/CardCategory.vue';
 
 export default {
   components: {
     ModalAdd,
-    CardKanban,
     ModalDetail,
+    CardCategory,
   },
   mounted() {
     this.$store.dispatch('readData');
