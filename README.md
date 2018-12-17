@@ -19,3 +19,7 @@ Jangan lupa untuk men-deploy aplikasi Amazing Kanban ini di Cloud. Kalian bebas 
 Kompetensi : vue (bebas), firebase, deployment
 Deadline : Week 4 - Senin jam 09:00
 Referensi : https://kamvan-6aa69.firebaseapp.com
+
+# Zainal
+
+https://kanban-60a6d.firebaseapp.com
