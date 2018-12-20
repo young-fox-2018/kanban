@@ -96,7 +96,7 @@ export default {
       if (this.email && this.password){
         axios({
           method:'post',
-          url:'http://localhost:3000/users/login',
+          url:'http://35.240.201.171/users/login',
           data:{
             email: this.email,
             password: this.password

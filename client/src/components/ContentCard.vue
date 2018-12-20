@@ -132,7 +132,7 @@ export default {
       if (localStorage.getItem('jtoken')){
         axios({
           method:'get',
-          url:'http://localhost:3000/users/checkUser',
+          url:'https://kanvanserver.grouppoint.online/users/checkUser',
           headers:{
             jtoken: localStorage.getItem('jtoken')
           }
