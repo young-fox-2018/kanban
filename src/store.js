@@ -123,14 +123,5 @@ export default new Vuex.Store({
           dispatch('readData');
         });
     },
-    // updateBacklog({ state, dispatch }, payload) {
-    //   const myState = state;
-    //   db.collection('kanban').doc(payload).update({
-    //     status: 'backlog',
-    //   })
-    //     .then(() => console.log('Task successfully updated'));
-    //   myState.showDetailModal = false;
-    //   dispatch('readData');
-    // },
   },
 });
