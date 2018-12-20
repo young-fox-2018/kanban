@@ -16,3 +16,6 @@
     firebase.initializeApp(config)
     const database = firebase.database()
     export default database
+
+# KENDALA
+    Waktu sempit, fitur standard banget, nothing special
