@@ -3,6 +3,7 @@
     <h1>Kanban</h1>
     <!-- <i class="fas fa-plus"></i> -->
     <input type="text" placeholder="Input Task Here" v-model="taskName">
+    <input type="number" placeholder="Point Here" v-model="point">
     <input type="submit" @click="sendItem">
   </div>
 </template>
@@ -13,13 +14,15 @@ export default {
   name: 'MainHeader',
   data () {
     return {
-      taskName: ''
+      taskName: '',
+      point: ''
     }
   },
   methods: {
     sendItem () {
       database.ref('/').push({
         title: this.taskName,
+        point: this.point,
         status: 'Pre-Log'
       })
       this.taskName = ''

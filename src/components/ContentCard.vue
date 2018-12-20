@@ -1,6 +1,7 @@
 <template>
   <div class="cardContent">
-    <h2>{{item.title}}</h2>
+    <h2> Task : {{item.title}}</h2>
+    <h5>Point : {{item.point}}</h5>
     <div class="container-button">
       <div>
         <h4 class="delete" @click="removeItem">delete</h4>
@@ -87,6 +88,9 @@ export default {
 .card h2 {
   padding-top: 20px;
   font-size: 20px;
+}
+.card h5 {
+  font-size: 15px;
 }
 .delete {
   color: #ffffff !important;
