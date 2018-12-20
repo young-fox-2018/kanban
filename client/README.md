@@ -1,7 +1,5 @@
 # client
 
-## Firebase
-[Link to firebase](https://kamvan-6b834.firebaseapp.com/)
 
 ## Project setup
 ```
