@@ -1,7 +1,9 @@
 deploy client =
 	https://teamkanvan.firebaseapp.com/
 
-notes : yang bisa delete hanya yang login, database usernya ke mlab, tapi belum terhubung, karena masih error
+fitur tambahan =
+- yang bisa delete hanya user berstatus admin,
+- pemberitahuan password saat di registrasikan via email (password generate otomatis)
 
 .env template :
 mUsername=administrator
